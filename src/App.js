@@ -21,7 +21,6 @@ const App = () => {
   const [currentState, setSate] = useState(stateEnum.all)
   const [source, setSource] = useState(null)
 
-  // Fetch Tasks
   const fetchData = async () => {
     return await fetch('https://datausa.io/api/data?drilldowns=Nation&measures=Population')
       .then((res) => res.json())
@@ -35,7 +34,7 @@ const App = () => {
     }
 
     getData()
-  })
+  }, [])
 
   const createChartData = (res) => {
     if(res === {})

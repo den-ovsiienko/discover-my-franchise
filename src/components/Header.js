@@ -5,13 +5,12 @@ import { useState } from 'react'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Header = ({title, onButtonClick, showChart}) => {
+const Header = ({title, onButtonClick}) => {
   const [showMenu, setShowMenu] = useState(false)
     
     return (
         <header className='header'>
             <h1>{title}</h1>
-            {/* <div className={ showMenu ? '' : 'header-container-mb'}> */}
             <div className={showMenu ? 'btn-container visible' : 'btn-container'}>
               <Button 
                   text='Show All' 
@@ -29,11 +28,12 @@ const Header = ({title, onButtonClick, showChart}) => {
                 text='Sources'
                 onClick={() => onButtonClick(stateEnum.sources)}
               />
-              <FontAwesomeIcon className='icon'
+              <FontAwesomeIcon 
+                className='icon'
+                size={'lg'}
                 icon={faBars}
                 onClick={() => setShowMenu(!showMenu)}
               />
-            {/* </div> */}
         </header>
     )
 }

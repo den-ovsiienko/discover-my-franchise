@@ -16,7 +16,6 @@ body {
   min-height: 25rem;
   max-height: 25rem;
   align-items: center;
-  /* text-align: center; */
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
@@ -115,5 +114,11 @@ body {
   }
   .visible {
     display: flex;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 24px;
   }
 }
